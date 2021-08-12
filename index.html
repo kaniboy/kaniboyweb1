@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>网络网页</title>
+</head>
+
+<body>
+	<div class="btn-list">
+		<button class="btn" type="button" data-action="navigateTo">navigateTo</button>
+	</div>
+	<!-- uni 的 SDK -->
+	<script type="text/javascript" src="https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js"></script>
+	<script type="text/javascript">
+		document.addEventListener('UniAppJSBridgeReady', function () {
+			document.querySelector('.btn-list').addEventListener('click', function (evt) {
+				uni.showToast({
+					title: '标题',
+					duration: 2000
+				});
+			});
+		});
+	</script>
+</body>
+
+</html>
